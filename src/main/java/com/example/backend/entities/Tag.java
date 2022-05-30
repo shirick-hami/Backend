@@ -24,5 +24,5 @@ public class Tag {
     private String tagName;
 
     @OneToMany(mappedBy = "category",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<BlogPost> blogs=new ArrayList<>();
+    private List<BlogPost> posts=new ArrayList<>();
 }
