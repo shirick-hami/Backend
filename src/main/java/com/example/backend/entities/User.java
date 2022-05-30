@@ -35,6 +35,7 @@ public class User {
     @Column
     private String auth_level;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @Column
+    @OneToMany(mappedBy = "users",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<BlogPost> posts = new ArrayList<>();
 }
